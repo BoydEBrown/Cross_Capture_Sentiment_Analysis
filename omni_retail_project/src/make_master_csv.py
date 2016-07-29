@@ -7,8 +7,13 @@
 import pandas as pd
 import os
 
-master_csv =
+
+master_csv = '/Users/boydbrown/Cross_Capture_Sentiment_Analysis/ \
+omni_retail_project/data/analysis_base_tables/master_text.csv'
+
+
 def make_master_txt_csv(csv_dir, master_csv):
+    pass
 
 def sort(csv_dir):
     shapes = []
@@ -24,11 +29,46 @@ def sort(csv_dir):
         d[key].append(value)
     return d
 
-def select():
+# If this doesn't work, rewrite select() to concatinat all non-nan
+# cells in column after row x (or 33?), by column.
+
+
+def select(d):  # dictionary from def sort
     for k, v in d.iteritems():
         if k == (104, 11):
-            pass
-            
+            rows = [7, 8, 12, 14, 96, 98, 99, 100, 103]
+        if k == (95, 11):
+            rows = [7, 8, 12, 14, 87, 90, 92, 94]
+        if k == (95, 7):
+            rows = [7, 8, 12, 14, 87, 90, 92, 94]
+        if k == (86, 11):
+            rows = [7, 8, 12, 14, 79, 81, 83, 85]
+        if k == (86, 8):
+            rows = [7, 8, 12, 14, 78, 81, 83, 85]
+        if k == (80, 11):
+            rows = [7, 8, 12, 14, 72, 75, 77, 79]
+        if k == (78, 11):
+            rows = [7, 8, 12, 14, 70, 73, 75, 77]
+        if k == (77, 11):
+            rows = [7, 8, 12, 14, 68, 72, 74, 76]
+        if k == (72, 11):
+            rows = [7, 8, 12, 14, 64, 67, 69, 71]
+        if k == (71, 11):
+            rows = [7, 8, 12, 14, 63, 66, 68, 70]
+        if k == (69, 11):
+            rows = [7, 8, 12, 14, 61, 64, 66, 68]
+        if k == (68, 11):
+            rows = [7, 8, 12, 14, 60, 63, 65, 67]
+        if k == (66, 11):
+            rows = [7, 8, 12, 14, 58, 61, 63, 65]
+        if k == (63, 11):
+            rows = [7, 8, 12, 14, 55, 58, 60, 62]
+        if k == (62, 21):
+            rows = [7, 8, 12, 14, 54, 57, 59, 61]
+        if k == (62, 11):
+            rows = [7, 8, 12, 14, 54, 57, 59, 61]
+    return rows
+
 
 def append_to_master():
     pass
