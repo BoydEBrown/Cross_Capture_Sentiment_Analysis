@@ -70,6 +70,28 @@ def select(d):  # dictionary from def sort
     return rows
 
 
+def get_questions(dataframe):
+    '''Returns a list of strings from rows 36+ in column 0.'''
+    quest_blob = []
+    for row in dataframe.iloc[36:, 0]:
+        if str(row) != 'nan':
+            quest_blob.append(row)
+    return "".join(str(quest_blob))
+
+
+def get_answers(dataframe):
+    '''Returns a list of touples, each containing column name and
+    a list of strings from rows 36+ by column.'''
+    ans_lst = []
+    for column in enumerate(df3):
+        ans = []
+        for row in df2.iloc[36:, column[0]]:
+            if str(row) != 'nan':
+                ans.append(row)
+        ans_lst.append((column[1], "".join(str(ans))))
+    print ans_lst
+
+
 def append_to_master():
     pass
 
